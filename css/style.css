@@ -284,23 +284,25 @@ h4{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     /* border-top: 2px solid royalblue ;  */
-    
     flex-wrap: wrap;
+    
+   
     
 }
 .semi_container{
-    /* width: 540px; */
+    /* maxi-width: 540px; */
     /* height: 100%; */
     display: block;
     /* background-color: #ffb03b; */
- 
+    display: flex;
+    
     flex-direction: column;
     
 }
 
 .non_veg{
-    width: 540px;
-    height: 96px;
+    max-width: 540px;
+    /* height: 96px; */
     padding: 0 15px;
     position: relative;
     /* background-color: #be1e2d; */
