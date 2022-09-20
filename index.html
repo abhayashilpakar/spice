@@ -7,8 +7,10 @@
     <title>Spice Indian Cusine</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="nav.js" defer></script>
+   
 </head>
 <body>
 
@@ -17,9 +19,10 @@
             <div class="headerImage">
                 <img src="images/menu.png" alt="">
             </div>
-    
+            
+            
             <div class="work flex">
-                <h2><span>Our</span>Menu</h2>
+                <h2><span class="working">Our</span>Menu</h2>
                 <h4>Check Our Menu</h4>
             </div>
         </section>
@@ -44,16 +47,20 @@
         <div class="header-secondary">
             <img   class="logo"  src="images/logo.png" alt="">
 
+            <button class="mobile-nav-button" aria-controls="navigation-menu-bar"  aria-expanded="false">
+                <!-- <i class="fa-solid fa-bars "></i> -->
+            </button>
+
             <nav class="navbar">
-                    <ul class="navigation-menu-bar">
+                <ul  class="navigation-menu-bar" id="navigation-menu-bar"  data-visible="false">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Galary</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li class="order"><a  class="ord" href="#">Order online <span class="menufy">(MENUFY)</span></a></li>
-                    </ul>
+                        <li class="order "><a  class="ord" href="#">Order online(MENUFY)</a></li>
+                </ul>
                 
         </nav>
     </div>
@@ -102,12 +109,13 @@
                             <div class="non_veg_1 flex">
                                 <a href="#">Non-Vegetable Thali*</a>
                                 <span class="money">$24</span>
-                            
                             </div>
 
-                        <p class="non_veg_2">
+                        <div>
+                            <p class="non_veg_2">
                             Tandoori Chicken, Chicken Tikka Masala, Chicken Curry, Rogan Josh, Yellow Dal, Rice, Naan, Raita, includes Dessert.
-                        </p>
+                            </p>
+                        </div>
                     </div>
 
                     <div class="non_veg ">
