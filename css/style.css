@@ -10,7 +10,10 @@
 }
 html{
     font-size: 10px;
-    
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
 }
     
 body,
@@ -41,8 +44,9 @@ footer{
 /* <!--************ top section ************--> */
 
 .section-container {
-    max-width: 134.90rem;
+    /* max-width: 134.90rem; */
     /* max-width: 1349px; */
+    width: 100%;
     height: 64.3rem;
     position: relative;
     align-items: center;
@@ -62,6 +66,7 @@ footer{
 .headerImage img{
     max-width: 100%;
     height: 100%;
+    
     display: block;
     filter: brightness(50%);
     object-fit: cover;
@@ -141,18 +146,14 @@ footer{
     left: 0;
     top: 5rem;
     padding: 10px 0;
-}
-
-.mobile-nav-button{
-    display: none;
-    cursor: pointer;
+    /* position: relative; */
 }
 
 .header-secondary{
-   max-width: 114em;
+   max-width: 114em; 
    display: inline-block;
     display: flex; 
-    
+    position: relative;
     padding: 0 15px;
     justify-content: space-between;
     margin-right: auto;
@@ -174,10 +175,8 @@ footer{
     /* margin-right: 20rem; */
 }
 
-
-
 .navbar{
-    max-width: 100%;
+    /* max-width: 100%; */
     padding-top: 13px;
     padding-bottom: 13px;
     display: flex;  
@@ -224,159 +223,47 @@ footer{
     text-align: center;
 }
 
-@media (max-width: 35rem){
-    .topHead{
-        display: none;
-    }
 
-    .header{
-      top: 0;
-    }
-    
-      .navigation-menu-bar{  
-        position: fixed;  
-        flex-direction: column;
-        background: #fff;
-        top: 55px;
-        border-radius: 10px;
-        right: 15px;
-        bottom: 15px;
-        left: 15px;
-        z-index: 9999;  
-        gap: 1.2rem; 
-        padding: 12px;
-        visibility: hidden; 
-    }
-    
-    .navigation-menu-bar[data-visible="true"]{
-        /* transform: translateX(0%); */
-        visibility: visible;
-    }
+.mobile-nav-button{
+    display: none;
+    cursor: pointer;
+    /* position:absolute; */
+    z-index: 9999;
+    /* background-image: url(../images/bars-solid.svg); */
+    /* background-repeat: no-repeat;
+    background-color: transparent; */
+    border: 0;
+    background: none;
+    /* right: 2rem; */ 
+}
+.btn-icon{
+    font-size: 3em;
+    color: white;
+}
 
-    .navigation-menu-bar > li a{
-        color: #343a40;
-        margin-right: 0;
-        /* background-color: #BE1E2D; */
-        font-size: 1.6rem;
-    }
-
-    .navigation-menu-bar > li{
-        text-align: center;
-    }
-    .order{
-        margin: 0;
-        text-align: center;
-        /* background-color: #be1e2d; */
-    }
-    .order .ord{
-        background-color: #be1e2d;
-    }
-
-    .mobile-nav-button{
-        display: block;
-        position:absolute;
-        z-index: 9999;
-        background-image: url(../images/bars-solid.svg);
-        background-color: transparent;
-        background-repeat: no-repeat;
-        width: 3rem;
-        aspect-ratio: 1;
-        border: 0;
-        right: 2rem;
-        
-    }
-    .mobile-nav-button[aria-expanded="true"]{
-        background-image:url(../images/xmark-solid.svg) ;
-    }
-
-    .container{
-        padding: 0;
-    }
-    
-    }
+.btn-icon[name="close-bar"]{
+    display: none;
+}
 
 
 
- @media  (max-width :56rem){
-    .topHead{
-        display: none;
-    }
-
-     .header{
-       top: 0%;
-     }
-
-     .navigation-menu-bar{  
-        position: fixed;  
-        flex-direction: column; 
-        background:#fff;
-        top: 55px;
-        border-radius: 10px;
-        right: 15px;
-        bottom: 15px;
-        left: 15px;
-        z-index: 9999;  
-        gap: 1.2rem; 
-        padding: 12px;
-        visibility: hidden;
-      
-        
-    }
-    
-    .navigation-menu-bar[data-visible="true"]{
-        visibility: visible;
-    }
-
-    .navigation-menu-bar > li a{
-        color: #343a40;
-        margin-right: 0;
-        font-weight: 400;
-        font-size: 1.6rem;
-       
-    }
-    .order{
-        margin: 0;
-        text-align: center;
-       
-    }
-    .order .ord{
-        background-color: #be1e2d;
-    }
-
-    .mobile-nav-button{
-        display: block;
-        position:absolute;
-        z-index: 9999;
-        background-image: url(../images/bars-solid.svg);
-        background-color: transparent;
-        background-repeat: no-repeat;
-        width: 3rem;
-        aspect-ratio: 1;
-        border: 0;
-        right: 2rem;
-        
-    }
-    .mobile-nav-button[aria-expanded="true"]{
-        background-image:url(../images/xmark-solid.svg) ;
-    }
-
-    .aalukhau{
-        flex-wrap: wrap;
-        justify-content: center;
+/* @media (max-width: 897px){
+        .navbar{
+            opacity: 0;
         }
-    
-} 
+} */
+
+  
+
 
 /* <!--************ end  of  navigation   ************--> */
 
 .container{
-    padding: 6rem 2rem;
-    display: block;
-
+    padding: 6rem 0rem;
 }
 
 .bot_container{
-    /* max-width: 114rem; */
+    max-width: 114rem;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -437,12 +324,10 @@ footer{
 .aalukhau{
     display: flex;
     /* background-color: lightgoldenrodyellow; */
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    /* flex-wrap: wrap; */
+  
 }
 .semi_container{
-    display: block;
+    width: 100%;
     display: flex;
     flex-direction: column; 
 }
@@ -451,9 +336,8 @@ footer{
 
 
 .non_veg{
-    max-width: 54rem;
-    padding: 0 15px;
-    position: relative;
+    max-width: 100%;
+    padding: 0 1.2em;
 }
 
 
@@ -464,16 +348,16 @@ footer{
     align-items: center;
     position: relative;
     font-size: 1.6rem;
+    
     /* overflow-x: hidden; */
 }
 
 /* .non_veg .non_veg_1::after{
-    content: "......................................................................"
-    "...................................................................."
-    "....................................................................";
+    content: "...................................................................";
      position: absolute;
      left: 5.1rem;
-     top:10px ; 
+     top:2px ;
+     left: 28%;
 } */
 
 
@@ -488,10 +372,10 @@ footer{
     position: relative;
 }
 .money{
-    font-family:  'Poppins', sans-serif;
-    font-weight: 600;
-     font: size 5rem ;
     
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #444444;
 }
 
 
