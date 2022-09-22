@@ -80,6 +80,12 @@
     .container{
         padding: 0;
     }
+
+    .aalukhau{
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+    
     
     }
 
