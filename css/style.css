@@ -32,6 +32,16 @@ footer{
     display: block;
 }
 
+
+
+
+
+/* Stop Animations During Window Resizing   */
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
 /* <!--************ utilities-classes for re-used ************--> */
 .flex{
     display: flex;
@@ -145,21 +155,36 @@ footer{
     right: 0;
     left: 0;
     top: 5rem;
-    padding: 10px 0;
+    
+    /* padding: 10px 0; */
     /* position: relative; */
 }
+
+
 
 .header-secondary{
    max-width: 114em; 
    display: inline-block;
     display: flex; 
-    position: relative;
     padding: 0 15px;
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
     align-items: center;
 }
+
+/* 
+.sticky{
+    position: fixed;
+    width: 100%;
+    height: 6.5em;
+    right: 0;
+    left: 0;
+    top: 5rem;
+    background: rgba(190, 30, 45, 0.85);
+    z-index: 9999;
+    box-shadow: 0 1.2em 3.2em rgba(0, 0, 0, 0.03);
+} */
 
 .navigation-menu-bar{
     list-style: none;
@@ -172,16 +197,16 @@ footer{
     margin: 0;
     padding: 0;
     max-width: 100%;
-    /* margin-right: 20rem; */
 }
 
 .navbar{
-    /* max-width: 100%; */
     padding-top: 13px;
     padding-bottom: 13px;
     display: flex;  
-   
-}
+   }
+
+
+
 .navigation-menu-bar li a{
     text-decoration: none;
     cursor: pointer;
@@ -227,15 +252,22 @@ footer{
 .mobile-nav-button{
     display: none;
     cursor: pointer;
-    /* position:absolute; */
-    z-index: 9999;
-    /* background-image: url(../images/bars-solid.svg); */
-    /* background-repeat: no-repeat;
-    background-color: transparent; */
+    z-index: 999;
     border: 0;
     background: none;
-    /* right: 2rem; */ 
+    position:absolute;
+    width: 3rem;
+    aspect-ratio: 1;
+    border: 0;
+    right: 2rem;
+    top: -35px;
 }
+
+.remove-scrolling { 
+    height: 100vh;
+    overflow: hidden;
+} 
+
 .btn-icon{
     font-size: 3em;
     color: white;
@@ -324,6 +356,7 @@ footer{
 .aalukhau{
     display: flex;
     /* background-color: lightgoldenrodyellow; */
+    transition: all 0.4s;
   
 }
 .semi_container{

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script src="nav.js" defer></script>
+ 
    
 </head>
 <body>
@@ -45,10 +46,10 @@
     
       <!--************ navigation  ************-->   
     <header class="header">
-        <div class="header-secondary ">
+        <div class="header-secondary">
             <img   class="logo"  src="images/logo.png" alt="">
 
-            <button class="mobile-nav-button" aria-controls="navigation-menu-bar"  aria-expanded="false">
+            <button class="mobile-nav-button" id="burger" onclick="disableScroll()">
                 <i class="fa-solid fa-bars btn--menubar btn-icon" name="open-bar"></i>
                 <i class="fa-solid fa-xmark btn--menubar btn-icon" name="close-bar"></i>
             </button>
@@ -63,9 +64,22 @@
                         <li><a href="#">Contact</a></li>
                         <li class="order "><a  class="ord" href="#">Order online(MENUFY)</a></li>
                 </ul>
-                
+            <!-- <style> 
+            .stop-scrolling {
+            height: 100vh;
+            overflow: hidden !important;
+            }
+
+            @media only screen and (max-width: 600px) {
+                body {
+                    height: 100vh;
+                overflow: hidden !important;
+                     }
+                    }
+
+            </style>   -->
             </nav>
-    </div>
+        </div>
        
     </header>
 
